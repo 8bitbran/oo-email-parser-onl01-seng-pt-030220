@@ -6,14 +6,12 @@
 class EmailAddressParser
   attr_accessor :email
   
-  @@parse = []
-  
   def initialize(emails)
     @emails = emails
   end
   
   def parse
-    @@parse << @emails.split.collect {|address| address.split(',')}
+    parse = @emails.split.collect {|address| address.split(',')}
     @@parse.flatten.uniq
   end 
 end 
