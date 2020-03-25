@@ -10,8 +10,7 @@ class EmailAddressParser
   
   def initialize(emails)
     @emails = emails.split(/[,\s]+/).uniq!
-    @@parse = @emails.join
-  end
+    @@parse
   
   def parse
     @@parse
