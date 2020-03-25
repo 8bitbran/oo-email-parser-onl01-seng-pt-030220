@@ -11,7 +11,7 @@ class EmailAddressParser
   def initialize(emails)
     @emails = emails.split(/[,\s]+/)
     @emails = @emails.uniq
-    @@parse += @emails
+    @@parse << @emails
   end
   
   def parse 
